@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!--
@@ -29,12 +29,19 @@
       5) <meta name="keywords" content="..."> (comma-separated keywords)
       6) <meta name="author" content="...">
     -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Planner</title>
+    <meta name="description" content="a recipe planner for meal planning" />
+    <meta name="keywords" content="Recipe, Planner, Meal Planning" />
+    <meta name="author" content="Nosdovah" />
 
     <!-- STEP 2 — Link your CSS file (optional but recommended) -->
     <!--
       Add: <link rel="stylesheet" href="styles.css">
       Even if the focus is HTML, a tiny bit of CSS helps you *see* your structure.
     -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- STEP 3 — Create a semantic page layout -->
@@ -53,6 +60,13 @@
       - One <p> explaining what the page is for
       - Add a <span> inside the paragraph to emphasize ONE word (ex: "simple")
     -->
+    <header>
+      <h1>Recipe Planner</h1>
+      <p>
+        a <span class="small">simple</span> recipe planner for meal planning
+        made by Nosdovah
+      </p>
+    </header>
 
     <!-- STEP 5 — Main section A (Lists) -->
     <!--
@@ -61,6 +75,24 @@
       - Add a <ul> list for "Meals" (at least 3 items)
       - Add an <ol> list for "Cooking Steps" (at least 4 steps)
     -->
+    <main>
+      <section class="card">
+        <h2>Today's Plan</h2>
+        <h3>Meals</h3>
+        <ul>
+          <li>Nasi Goreng</li>
+          <li>Soto Betawi</li>
+          <li>Gado-Gado</li>
+        </ul>
+        <h3>Cooking Steps</h3>
+        <ol>
+          <li>Prepare ingredients</li>
+          <li>Cook the meal</li>
+          <li>Serve the meal</li>
+          <li>Enjoy the meal</li>
+        </ol>
+      </section>
+    </main>
 
     <!-- STEP 6 — Main section B (Tables) -->
     <!--
@@ -69,7 +101,45 @@
       - Use <thead> and <tbody>
       - Add at least 5 rows in the tbody
     -->
-
+    <section class="card">
+      <h2>Ingredients Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Amount</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rice</td>
+            <td>2 cups</td>
+            <td>Cooked</td>
+          </tr>
+          <tr>
+            <td>Chicken Broth</td>
+            <td>2 cup</td>
+            <td>Cooked</td>
+          </tr>
+          <tr>
+            <td>Vegetables</td>
+            <td>2 grams</td>
+            <td>chopped</td>
+          </tr>
+          <tr>
+            <td>eggs</td>
+            <td>2</td>
+            <td>boiled</td>
+          </tr>
+          <tr>
+            <td>Salt</td>
+            <td>1 tsp</td>
+            <td>needed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <!-- STEP 7 — Main section C (Form) -->
     <!--
       Create a third <section class="card"> called "Shopping Note"
@@ -81,21 +151,48 @@
         4) A textarea for "Extra notes"
         5) A submit button
     -->
+    <section class="card">
+      <h2>Shopping Note</h2>
+      <form>
+        <label for="item">Item</label>
+        <input type="text" id="item" name="item" />
+        <br />
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" />
+        <br />
+        <label for="category">Category</label>
+        <select id="category" name="category">
+          <option value="">Select a category</option>
+          <option value="Produce">Produce</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Protein">Protein</option>
+          <option value="Other">Other</option>
+        </select>
+        <br />
+        <label for="extra-notes">Extra Notes</label>
+        <textarea id="extra-notes" name="extra-notes"></textarea>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
     <!-- STEP 8 — Footer (tiny SEO reminder) -->
     <!--
       In <footer>, add a <p class="small"> reminding what meta description is used for.
     -->
+    <footer>
+      <p class="small">a recipe planner for meal planning</p>
+    </footer>
 
     <!-- STEP LAST — Validate your HTML -->
     <!--
       Quick self-check:
-      ✅ Do you have ONLY ONE <h1>?
-      ✅ Are your headings in order? (h1 → h2 → h3)
-      ✅ Does every <label> connect to an input using for="..." and id="..."?
-      ✅ Does your table have <thead> and <tbody>?
-      ✅ Did you use BOTH a list and a table somewhere?
-      ✅ Did you use a <span> to style a *small* piece of text inside a bigger element?
+      ✅ Do you have ONLY ONE <h1>? -- YES
+      ✅ Are your headings in order? (h1 → h2 → h3) -- YES
+      ✅ Does every <label> connect to an input using for="..." and id="..."? -- YES
+      ✅ Does your table have <thead> and <tbody>? -- YES
+      ✅ Did you use BOTH a list and a table somewhere? -- YES
+      ✅ Did you use a <span> to style a *small* piece of text inside a bigger element? -- YES
     -->
   </body>
 </html>
